@@ -33,7 +33,20 @@ namespace VehicleManager.API.Data
                           .HasMany(Customer => Customer.Sales)
                           .WithRequired(sale => sale.Customer)
                           .HasForeignKey(Sale => Sale.CustomerID);
-
+            //Color has many
+            modelBuilder.Entity<Color>()
+                    .HasMany(color => color.Vehicle)
+                    .WithRequired(vehicle => vehicle.Color)
+			        .HasForeignKey(vehicle => vehicle.ColorID);
+            //V-Type has many
+            modelBuilder.Entity<VehicleType>()
+                    .HasMany(VehicleType => VehicleType.Vehicle)
+                    .WithRequired(vehicle => vehicle.VehicleType)
+                    .HasForeignKey(vehicle => vehicle.ColorID);
         }
+
+        public System.Data.Entity.DbSet<VehicleManager.API.Models.VehicleType> VehicleTypes { get; set; }
+
+        public System.Data.Entity.DbSet<VehicleManager.API.Models.Color> Colors { get; set; }
     }
 }

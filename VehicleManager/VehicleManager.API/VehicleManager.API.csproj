@@ -49,6 +49,9 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Faker, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Faker.1.2\lib\Faker.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
@@ -97,9 +100,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\ColorsController.cs" />
     <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="Controllers\SalesController.cs" />
     <Compile Include="Controllers\VehiclesController.cs" />
+    <Compile Include="Controllers\VehicleTypesController.cs" />
     <Compile Include="Data\VehicleManagerDataContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -108,10 +113,24 @@
     <Compile Include="Migrations\201704032216449_InitialMigration.Designer.cs">
       <DependentUpon>201704032216449_InitialMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201704032302482_secondMigration.cs" />
+    <Compile Include="Migrations\201704032302482_secondMigration.Designer.cs">
+      <DependentUpon>201704032302482_secondMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704032329188_thirdMigration.cs" />
+    <Compile Include="Migrations\201704032329188_thirdMigration.Designer.cs">
+      <DependentUpon>201704032329188_thirdMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704032332380_thirdMigration1.cs" />
+    <Compile Include="Migrations\201704032332380_thirdMigration1.Designer.cs">
+      <DependentUpon>201704032332380_thirdMigration1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Color.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Sale.cs" />
     <Compile Include="Models\Vehicle.cs" />
+    <Compile Include="Models\VehicleType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -129,6 +148,15 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201704032216449_InitialMigration.resx">
       <DependentUpon>201704032216449_InitialMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704032302482_secondMigration.resx">
+      <DependentUpon>201704032302482_secondMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704032329188_thirdMigration.resx">
+      <DependentUpon>201704032329188_thirdMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704032332380_thirdMigration1.resx">
+      <DependentUpon>201704032332380_thirdMigration1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
