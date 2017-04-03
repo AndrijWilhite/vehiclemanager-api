@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
+using System.Web.Http.Cors;
+using Newtonsoft.Json.Serialization;
 
 namespace VehicleManager.API
 {
@@ -19,6 +21,12 @@ namespace VehicleManager.API
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+            config.Formatters.Remove(config.Formatters.XmlFormatter);
+
+            config.EnableCors(new EnableCorsAttribute("*", "*", "*"));
+
+            config.Formatters.JsonFormatter.SerializerSettings.ContractResolver =
+                new CamelCasePropertyNamesContractResolver();
         }
     }
 }
