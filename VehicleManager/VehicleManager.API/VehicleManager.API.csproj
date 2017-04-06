@@ -109,21 +109,17 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201704032216449_InitialMigration.cs" />
-    <Compile Include="Migrations\201704032216449_InitialMigration.Designer.cs">
-      <DependentUpon>201704032216449_InitialMigration.cs</DependentUpon>
+    <Compile Include="Migrations\201704052021286_InitialMigration.cs" />
+    <Compile Include="Migrations\201704052021286_InitialMigration.Designer.cs">
+      <DependentUpon>201704052021286_InitialMigration.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201704032302482_secondMigration.cs" />
-    <Compile Include="Migrations\201704032302482_secondMigration.Designer.cs">
-      <DependentUpon>201704032302482_secondMigration.cs</DependentUpon>
+    <Compile Include="Migrations\201704052317519_secondMigration.cs" />
+    <Compile Include="Migrations\201704052317519_secondMigration.Designer.cs">
+      <DependentUpon>201704052317519_secondMigration.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201704032329188_thirdMigration.cs" />
-    <Compile Include="Migrations\201704032329188_thirdMigration.Designer.cs">
-      <DependentUpon>201704032329188_thirdMigration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201704032332380_thirdMigration1.cs" />
-    <Compile Include="Migrations\201704032332380_thirdMigration1.Designer.cs">
-      <DependentUpon>201704032332380_thirdMigration1.cs</DependentUpon>
+    <Compile Include="Migrations\201704061633245_3Migration.cs" />
+    <Compile Include="Migrations\201704061633245_3Migration.Designer.cs">
+      <DependentUpon>201704061633245_3Migration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Color.cs" />
@@ -146,17 +142,14 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201704032216449_InitialMigration.resx">
-      <DependentUpon>201704032216449_InitialMigration.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201704052021286_InitialMigration.resx">
+      <DependentUpon>201704052021286_InitialMigration.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201704032302482_secondMigration.resx">
-      <DependentUpon>201704032302482_secondMigration.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201704052317519_secondMigration.resx">
+      <DependentUpon>201704052317519_secondMigration.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201704032329188_thirdMigration.resx">
-      <DependentUpon>201704032329188_thirdMigration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201704032332380_thirdMigration1.resx">
-      <DependentUpon>201704032332380_thirdMigration1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201704061633245_3Migration.resx">
+      <DependentUpon>201704061633245_3Migration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

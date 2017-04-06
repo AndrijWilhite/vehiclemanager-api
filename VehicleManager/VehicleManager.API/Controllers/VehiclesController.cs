@@ -18,9 +18,22 @@ namespace VehicleManager.API.Controllers
         private VehicleManagerDataContext db = new VehicleManagerDataContext();
 
         // GET: api/Vehicles
-        public IQueryable<Vehicle> GetVehicles()
+        public IHttpActionResult GetVehicles()
         {
-            return db.Vehicles;
+            var resultSet = db.Vehicles.Select(vehicle => new
+            {
+                vehicle.VehicleID,
+                vehicle.VehicleTypeID,
+                vehicle.Make,
+                vehicle.Model,
+                vehicle.Year,
+                vehicle.RetailPrice,
+                vehicle.Color,
+                vehicle.VehicleType.Description
+
+            });
+
+            return Ok(resultSet);
         }
 
         // GET: api/Vehicles/5
@@ -33,7 +46,18 @@ namespace VehicleManager.API.Controllers
                 return NotFound();
             }
 
-            return Ok(vehicle);
+            return Ok(new
+            {
+                vehicle.VehicleID,
+                vehicle.VehicleTypeID,
+                vehicle.Make,
+                vehicle.Model,
+                vehicle.Year,
+                vehicle.RetailPrice,
+                vehicle.Color,
+                vehicle.VehicleType.Description
+
+            });
         }
 
         // PUT: api/Vehicles/5
@@ -49,8 +73,17 @@ namespace VehicleManager.API.Controllers
             {
                 return BadRequest();
             }
+            var dbVehicle = db.Vehicles.Find(id);
+            dbVehicle.VehicleID = vehicle.VehicleID;
+            dbVehicle.VehicleTypeID = vehicle.VehicleTypeID;
+            dbVehicle.Make = vehicle.Make;
+            dbVehicle.Model = vehicle.Model;
+            dbVehicle.Year = vehicle.Year;
+            dbVehicle.RetailPrice = vehicle.RetailPrice;
+            dbVehicle.Color = vehicle.Color;
+            dbVehicle.VehicleTypeID = vehicle.VehicleTypeID;
 
-            db.Entry(vehicle).State = EntityState.Modified;
+            db.Entry(dbVehicle).State = EntityState.Modified;
 
             try
             {
@@ -99,7 +132,18 @@ namespace VehicleManager.API.Controllers
             db.Vehicles.Remove(vehicle);
             db.SaveChanges();
 
-            return Ok(vehicle);
+            return Ok(new
+            {
+                vehicle.VehicleID,
+                vehicle.VehicleTypeID,
+                vehicle.Make,
+                vehicle.Model,
+                vehicle.Year,
+                vehicle.RetailPrice,
+                vehicle.Color,
+                vehicle.VehicleType.Description
+
+            });
         }
 
         protected override void Dispose(bool disposing)

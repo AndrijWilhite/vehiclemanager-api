@@ -47,9 +47,8 @@ C:\Users\andrij\dev\VehicleManager-api\VehicleManager\VehicleManager.API\bin\Sys
 C:\Users\andrij\dev\VehicleManager-api\VehicleManager\VehicleManager.API\obj\Debug\VehicleManager.API.csprojResolveAssemblyReference.cache
 C:\Users\andrij\dev\VehicleManager-api\VehicleManager\VehicleManager.API\obj\Debug\VehicleManager.API.dll
 C:\Users\andrij\dev\VehicleManager-api\VehicleManager\VehicleManager.API\obj\Debug\VehicleManager.API.pdb
+C:\Users\andrij\dev\VehicleManager-api\VehicleManager\VehicleManager.API\bin\Faker.dll
 C:\Users\andrij\dev\VehicleManager-api\VehicleManager\VehicleManager.API\obj\Debug\VehicleManager.API.Migrations.InitialMigration.resources
 C:\Users\andrij\dev\VehicleManager-api\VehicleManager\VehicleManager.API\obj\Debug\VehicleManager.API.csproj.GenerateResource.Cache
 C:\Users\andrij\dev\VehicleManager-api\VehicleManager\VehicleManager.API\obj\Debug\VehicleManager.API.Migrations.secondMigration.resources
-C:\Users\andrij\dev\VehicleManager-api\VehicleManager\VehicleManager.API\bin\Faker.dll
-C:\Users\andrij\dev\VehicleManager-api\VehicleManager\VehicleManager.API\obj\Debug\VehicleManager.API.Migrations.thirdMigration.resources
-C:\Users\andrij\dev\VehicleManager-api\VehicleManager\VehicleManager.API\obj\Debug\VehicleManager.API.Migrations.thirdMigration1.resources
+C:\Users\andrij\dev\VehicleManager-api\VehicleManager\VehicleManager.API\obj\Debug\VehicleManager.API.Migrations._3Migration.resources

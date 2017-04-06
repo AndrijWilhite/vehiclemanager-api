@@ -3,7 +3,7 @@ namespace VehicleManager.API.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class thirdMigration : DbMigration
+    public partial class _3Migration : DbMigration
     {
         public override void Up()
         {

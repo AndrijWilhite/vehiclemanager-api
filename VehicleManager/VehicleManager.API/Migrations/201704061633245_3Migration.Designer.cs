@@ -7,13 +7,13 @@ namespace VehicleManager.API.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class thirdMigration : IMigrationMetadata
+    public sealed partial class _3Migration : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(thirdMigration));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(_3Migration));
         
         string IMigrationMetadata.Id
         {
-            get { return "201704032329188_thirdMigration"; }
+            get { return "201704061633245_3Migration"; }
         }
         
         string IMigrationMetadata.Source

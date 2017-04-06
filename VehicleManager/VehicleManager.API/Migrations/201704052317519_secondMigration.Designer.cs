@@ -7,13 +7,13 @@ namespace VehicleManager.API.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class InitialMigration : IMigrationMetadata
+    public sealed partial class secondMigration : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(InitialMigration));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(secondMigration));
         
         string IMigrationMetadata.Id
         {
-            get { return "201704032216449_InitialMigration"; }
+            get { return "201704052317519_secondMigration"; }
         }
         
         string IMigrationMetadata.Source

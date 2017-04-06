@@ -18,9 +18,17 @@ namespace VehicleManager.API.Controllers
         private VehicleManagerDataContext db = new VehicleManagerDataContext();
 
         // GET: api/Customers
-        public IQueryable<Customer> GetCustomers()
+        public IHttpActionResult GetCustomers()
         {
-            return db.Customers;
+            var resultSet = db.Customers.Select(customer => new
+            {
+                customer.CustomerID,
+                customer.EmailAdress,
+                customer.Telephone,
+                customer.FirstName,
+                customer.LastName
+             });
+            return Ok(resultSet);
         }
 
         // GET: api/Customers/5
@@ -33,7 +41,14 @@ namespace VehicleManager.API.Controllers
                 return NotFound();
             }
 
-            return Ok(customer);
+            return Ok(new
+            {
+                customer.CustomerID,
+                customer.EmailAdress,
+                customer.Telephone,
+                customer.FirstName,
+                customer.LastName
+            });
         }
 
         // PUT: api/Customers/5
@@ -49,8 +64,14 @@ namespace VehicleManager.API.Controllers
             {
                 return BadRequest();
             }
+            var dbCustomer = db.Customers.Find(id);
+                dbCustomer.EmailAdress = customer.EmailAdress;
+                dbCustomer.CustomerID = customer.CustomerID;
+                dbCustomer.Telephone = customer.Telephone;
+                dbCustomer.FirstName = customer.FirstName;
+                dbCustomer.LastName = customer.LastName;
 
-            db.Entry(customer).State = EntityState.Modified;
+            db.Entry(dbCustomer).State = EntityState.Modified;
 
             try
             {
@@ -99,7 +120,14 @@ namespace VehicleManager.API.Controllers
             db.Customers.Remove(customer);
             db.SaveChanges();
 
-            return Ok(customer);
+            return Ok(new
+            {
+                customer.CustomerID,
+                customer.EmailAdress,
+                customer.Telephone,
+                customer.FirstName,
+                customer.LastName
+            });
         }
 
         protected override void Dispose(bool disposing)
