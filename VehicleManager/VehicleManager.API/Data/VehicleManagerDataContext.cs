@@ -13,7 +13,9 @@ namespace VehicleManager.API.Data
         //Con
         public VehicleManagerDataContext() : base("VehicleManager")
         {
-
+            Database.SetInitializer(
+                new MigrateDatabaseToLatestVersion<VehicleManagerDataContext, Configuration>()
+                 );
         }
         //DBsets
         public IDbSet<Customer> Customers { get; set; }
