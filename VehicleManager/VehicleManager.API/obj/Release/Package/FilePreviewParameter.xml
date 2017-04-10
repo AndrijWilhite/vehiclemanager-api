@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="VehicleManagerAPI" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\andrij\\dev\\VehicleManager-api\\VehicleManager\\VehicleManager\.API\\obj\\Debug\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Users\\andrij\\dev\\VehicleManager-api\\VehicleManager\\VehicleManager\.API\\obj\\Debug\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="VehicleManager-Web.config Connection String" description="" value="VehicleManager_ConnectionString" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\andrij\\dev\\VehicleManager-api\\VehicleManager\\VehicleManager\.API\\obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='VehicleManager']/@connectionString" />
+  </parameter>
+</parameters>

@@ -20,6 +20,6 @@ namespace VehicleManager.API.Models
         //Nav
         public virtual ICollection<Sale> Sales {get; set;}
         public virtual Color Color { get; internal set; }
-        public virtual VehicleType VehicleType { get; internal set; }
+        public virtual VehicleType VehicleTypes { get; internal set; }
     }
 }

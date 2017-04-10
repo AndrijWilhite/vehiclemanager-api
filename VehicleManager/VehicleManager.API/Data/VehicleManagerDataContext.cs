@@ -4,6 +4,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using VehicleManager.API.Models;
+using VehicleManager.API.Migrations;
 
 namespace VehicleManager.API.Data
 {
@@ -45,7 +46,7 @@ namespace VehicleManager.API.Data
             //V-Type has many
             modelBuilder.Entity<VehicleType>()
                     .HasMany(VehicleType => VehicleType.Vehicle)
-                    .WithRequired(vehicle => vehicle.VehicleType)
+                    .WithRequired(vehicle => vehicle.VehicleTypes)
                     .HasForeignKey(vehicle => vehicle.VehicleTypeID);
         }
     }

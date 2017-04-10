@@ -29,7 +29,7 @@ namespace VehicleManager.API.Controllers
                 vehicle.Year,
                 vehicle.RetailPrice,
                 vehicle.Color,
-                vehicle.VehicleType.Description
+                vehicle.VehicleTypes.Description
 
             });
 
@@ -55,7 +55,7 @@ namespace VehicleManager.API.Controllers
                 vehicle.Year,
                 vehicle.RetailPrice,
                 vehicle.Color,
-                vehicle.VehicleType.Description
+                vehicle.VehicleTypes.Description
 
             });
         }
@@ -141,7 +141,7 @@ namespace VehicleManager.API.Controllers
                 vehicle.Year,
                 vehicle.RetailPrice,
                 vehicle.Color,
-                vehicle.VehicleType.Description
+                vehicle.VehicleTypes.Description
 
             });
         }

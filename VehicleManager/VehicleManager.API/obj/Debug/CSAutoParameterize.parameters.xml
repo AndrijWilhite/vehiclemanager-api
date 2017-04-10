@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="VehicleManager-Web.config Connection String" description="VehicleManager Connection String used in web.config by the application to access the database." defaultValue="VehicleManager_ConnectionString" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\andrij\\dev\\VehicleManager-api\\VehicleManager\\VehicleManager\.API\\obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='VehicleManager']/@connectionString" />
+  </parameter>
+</parameters>
